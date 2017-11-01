@@ -1,0 +1,15 @@
+{
+    "name": "frenet-node",
+    "version": "0.1.0",
+    "main": "index.js",
+    "description": "Integração para cotação e rastreio de frete da Frenet",
+    "keywords": [
+        "frenet",
+        "node.js"
+    ],
+    "homepage": "https://github.com/wcustodio/frenet-node",
+    "author": "Willian Custódio",
+    "dependencies": {
+        "request": "^2.83.0"
+    }
+}
