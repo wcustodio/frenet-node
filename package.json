@@ -1,6 +1,6 @@
 {
     "name": "frenet-node",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "index.js",
     "description": "Integração para cotação e rastreio de frete da Frenet",
     "keywords": [
