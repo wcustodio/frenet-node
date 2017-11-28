@@ -3,13 +3,10 @@ const request = require('request');
 const frenet = function(token) {
     this.token = token;
     this.url = 'http://api.frenet.com.br/';
+    this.items = [];
 }
 
 frenet.prototype.addItem = function(item) {
-    if (!this.items) {
-        this.items = [];
-    }
-
     this.items.push({
         Weight: item.weight,
         Height: item.height,
@@ -46,6 +43,10 @@ frenet.prototype.quote = function(data, cb) {
 
         return cb(err, false);
     })
+}
+
+frenet.prototype.countItems = function() {
+    return this.items.length;
 }
 
 module.exports = frenet;
