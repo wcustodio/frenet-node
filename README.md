@@ -2,7 +2,7 @@
 Integração Node.js para cotação e rastreio Frenet
 
 ## Instalação
-`npm install node-pagseguro`
+`npm install node-frenet`
 
 ## Quotação
 
