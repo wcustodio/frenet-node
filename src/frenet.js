@@ -49,4 +49,26 @@ frenet.prototype.countItems = function() {
     return this.items.length;
 }
 
+frenet.prototype.getInfo = function(cb) {
+    var params = {
+        url: this.url + 'shipping/info',
+        headers: {
+            token: this.token
+        }
+    }
+
+    request.get(params, function(err, response, body) {
+        if (err) {
+            return cb(err, false);
+        }
+
+        body = JSON.parse(body);
+        if (body && body.ShippingSeviceAvailableArray) {
+            return cb(false, body.ShippingSeviceAvailableArray);
+        }
+
+        return cb(err, false);
+    })
+}
+
 module.exports = frenet;
